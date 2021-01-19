@@ -1,9 +1,9 @@
 import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/core/styles';
-import theme from '../themes/dark';
+import theme from '../themes/stealth';
 
-export default class MyDocument extends Document {
+export default class MyDocument extends Document {  
   render() {
     return (
       <Html lang="en">
@@ -15,7 +15,7 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
         </Head>
-        <body>
+        <body style={{height: '100%', backgroundColor: '#1C1C1C'}}>
           <Main />
           <NextScript />
         </body>

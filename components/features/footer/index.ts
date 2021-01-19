@@ -1,12 +1,12 @@
 import { connect } from 'react-redux';
 import Component from './component';
-import { actions as templateActions, getCounter } from './duck';
+import { actions as contactDialogActions } from '../contactDialog/duck';
 import Types from 'Types';
 
 const mapStateToProps = (state: Types.RootState) => ({
-    value: getCounter(state),
+
 });
 
 export default connect(mapStateToProps, {
-    onIncrement: templateActions.increment,
+    onOpenContactDialog: contactDialogActions.open,
 })(Component);

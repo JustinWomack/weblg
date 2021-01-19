@@ -33,5 +33,5 @@ export const actions = {
 export type Action = ActionType<typeof actions>;
 
 // Selectors
-export const getCounter = ({ counter }: Types.RootState) =>
-    counter.value;
+export const getCounter = ({ nav }: Types.RootState) =>
+    nav.value;

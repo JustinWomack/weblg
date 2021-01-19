@@ -5,21 +5,27 @@ import Types from 'Types';
 // Action Types
 export enum types {
     INCREMENT = 'counter/INCREMENT',
+    DECREMENT = 'counter/INCREMENT',
+    SET = 'counter/SET',
 }
 
 // Reducer
 export type State = DeepReadonly<{
-    value: number;
+    position: number;
 }>;
 
 const initialState: State = {
-    value: 0,
+    position: 0,
 };
 
 export default (state: State = initialState, action: Action) => {
     switch (action.type) {
         case types.INCREMENT:
-            return { ...state, value: state.value + 1 };
+            return { ...state, position: state.position + 1 };
+        case types.DECREMENT:
+            return { ...state, position: state.position - 1 };
+        case types.SET:
+            return { ...state, position: action.payload };
     }
 
     return state;
@@ -28,10 +34,14 @@ export default (state: State = initialState, action: Action) => {
 // Action creators
 export const actions = {
     increment: createAction(types.INCREMENT),
+    decrement: createAction(types.DECREMENT),
+    setPosition: createAction(types.SET, (action) => {
+        return (position: number) => action(position)
+    }),
 };
 
 export type Action = ActionType<typeof actions>;
 
 // Selectors
-export const getCounter = ({ counter }: Types.RootState) =>
-    counter.value;
+export const getPosition = ({ slideshow }: Types.RootState) =>
+    slideshow.position;

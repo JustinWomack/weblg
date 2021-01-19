@@ -1,45 +1,41 @@
-import React from 'react';
-import { createStyles, Theme, withStyles } from '@material-ui/core/styles';
+import { FunctionComponent } from 'react';
+import { createStyles, Theme, WithStyles, withStyles } from '@material-ui/core/styles';
+import {
+    AppBar,
+    Toolbar,
+    IconButton,
+} from '@material-ui/core';
+import { Menu } from '@material-ui/icons';
 
 const styles = (theme: Theme) =>
     createStyles({
         root: {
-            marginBottom: 21,
+            marginBottom: 64,
         },
     });
 
-interface Props {
-    classes?: any;
+interface Props extends WithStyles<typeof styles> {
+
 }
 
 const initialState = {
     open: false,
 };
 
-type State = Readonly<typeof initialState>;
+const Component: FunctionComponent<Props> = (props: Props) => {
+    const { classes } = props;
 
-class Template extends React.Component<Props, State> {
-    readonly state: State = initialState;
-    constructor(props: Props) {
-        super(props);
-        this.state = {
-            open: initialState.open,
-        };
-    }
+    return (
+        <div className={classes.root}>
+            <AppBar>
+                <Toolbar>
+                    <IconButton edge="start" color="inherit">
+                        <Menu />
+                    </IconButton>
+                </Toolbar>
+            </AppBar>
+        </div>
+    );
+};
 
-    render() {
-        const { classes } = this.props;
-
-        return (
-            <div className={classes.root}>
-                Template
-            </div>
-        );
-    }
-
-    private handleOpen = () => this.setState(openDialog);
-}
-
-const openDialog = (prevState: State) => ({ open: false });
-
-export default withStyles(styles)(Template);
+export default withStyles(styles)(Component);
