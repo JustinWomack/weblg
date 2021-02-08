@@ -5,4 +5,7 @@
 /.env
 .next
 .env
+server.crt
+server.csr
+server.key
 dist
