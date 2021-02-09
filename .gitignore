@@ -5,6 +5,7 @@
 /.env
 .next
 .env
+.env.local
 server.crt
 server.csr
 server.key
