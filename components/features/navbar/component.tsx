@@ -1,4 +1,4 @@
-import { FunctionComponent, Children, ReactNode } from 'react';
+import { FunctionComponent, ReactNode } from 'react';
 import { createStyles, Theme, WithStyles, withStyles } from '@material-ui/core/styles';
 import {
     AppBar,

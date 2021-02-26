@@ -23,10 +23,6 @@ interface Props extends WithStyles<typeof styles> {
 
 }
 
-const initialState = {
-    open: false,
-};
-
 const Component: FunctionComponent<Props> = (props: Props) => {
     const { classes } = props;
 

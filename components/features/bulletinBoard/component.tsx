@@ -1,8 +1,8 @@
 import { FunctionComponent, ReactNode, Children, ReactElement, isValidElement } from 'react';
 import { createStyles, Theme, WithStyles, withStyles } from '@material-ui/core/styles';
 import { Breakpoint } from '@material-ui/core/styles/createBreakpoints';
-import { Typography, GridList, GridListTile, GridListProps, GridListTileProps, Divider, SvgIcon, useTheme, useMediaQuery } from '@material-ui/core';
-import { Bulletin, BulletinProps } from '../';
+import { Typography, GridList, GridListTile, GridListProps, useTheme, useMediaQuery } from '@material-ui/core';
+import { BulletinProps } from '../';
 
 const styles = (theme: Theme) =>
     createStyles({

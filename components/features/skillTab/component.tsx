@@ -4,7 +4,7 @@ import { CircularProgress, Typography, Box, TypographyVariant } from '@material-
 
 const styles = (theme: Theme) =>
     createStyles({
-        skill: {
+        root: {
 
         },
     });
@@ -15,10 +15,6 @@ interface Props extends WithStyles<typeof styles> {
     level: number;
     typographyVariant: TypographyVariant;
 }
-
-const initialState = {
-    open: false,
-};
 
 const Component: FunctionComponent<Props> = (props: Props) => {
     const { classes, size, name, level, typographyVariant } = props;

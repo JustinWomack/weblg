@@ -9,8 +9,6 @@ const styles = (theme: Theme) =>
     createStyles({
         root: {
             marginBottom: 21,
-            // width: 260,
-            // height: 480,
             width: 480,
             height: 590,
             marginLeft: 4,
@@ -22,13 +20,7 @@ const styles = (theme: Theme) =>
             position: 'relative',
             width: '100%',
             height: '100%',
-            // backgroundImage: 'url(/static/images/edu_banner.png)',
-            // '&:hover': {
-            //     transition: '.3s ease',
-            //     transform: 'scale(1.03)',
-            // },
             backgroundPosition: 'center',
-            // transition: '.3s ease',
             backgroundSize: 'cover',
         },
         slidingOverlayClosed: {
@@ -47,7 +39,6 @@ const styles = (theme: Theme) =>
             width: '100%',
             overflow: 'hidden',
             transition: '.5s ease',
-            // backgroundColor: '#9442D4',
         },
         staticOverlayOpened: {
             color: 'black',

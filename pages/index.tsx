@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import { createStyles, Theme, WithStyles, withStyles } from '@material-ui/core/styles';
-import { Typography, Divider, SvgIcon, ButtonBase, Button, Grid } from '@material-ui/core';
+import { Divider } from '@material-ui/core';
 import Navbar from '../components/features/navbar';
 import ParticleHero from '../components/features/particlehero';
 import Bio from '../components/features/bio';
@@ -31,10 +31,6 @@ const styles = (theme: Theme) =>
 interface Props extends WithStyles<typeof styles> {
     classes: any;
 }
-
-const initialState = {
-    open: false,
-};
 
 const Page: FunctionComponent<Props> = (props: Props) => {
     const { classes } = props;

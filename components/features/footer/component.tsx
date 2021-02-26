@@ -9,8 +9,6 @@ import {
     SvgIcon,
 } from '@material-ui/core';
 
-// backgroundColor: '#26292f',
-
 const styles = (theme: Theme) =>
     createStyles({
         root: {

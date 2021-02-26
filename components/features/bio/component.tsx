@@ -1,6 +1,6 @@
-import React, { FunctionComponent, Fragment } from 'react';
+import React, { FunctionComponent } from 'react';
 import { createStyles, Theme, WithStyles, withStyles } from '@material-ui/core/styles';
-import { Typography, Grid, ButtonBase, Container } from '@material-ui/core';
+import { Typography, Grid } from '@material-ui/core';
 
 const styles = (theme: Theme) =>
     createStyles({

@@ -1,11 +1,24 @@
-import { FunctionComponent, Children, ReactNode } from 'react';
+import { FunctionComponent, Children, ReactNode, Fragment } from 'react';
 import { createStyles, Theme, WithStyles, withStyles } from '@material-ui/core/styles';
+import { ButtonBase } from '@material-ui/core';
 import SwipeableViews from 'react-swipeable-views';
 
 const styles = (theme: Theme) =>
     createStyles({
-        root: {
-            marginBottom: 64,
+        changeSlideButton: {
+            width: 32,
+            height: 12,
+            backgroundColor: theme.palette.secondary.main,
+            '&:hover': {
+                border: '2px solid #f2cb7e'
+            },
+            margin: 8,
+        },
+        changeSlideButtonActive: {
+            width: 32,
+            height: 12,
+            backgroundColor: theme.palette.primary.main,
+            margin: 8,
         },
     });
 
@@ -29,18 +42,14 @@ const Component: FunctionComponent<Props> = (props: Props) => {
 
     const tabElements = childArray.map((child, i) => {
         return(
-            <div
+            <ButtonBase
+                focusRipple
+                className={position === i ? classes.changeSlideButtonActive : classes.changeSlideButton}
                 key={i}
                 onClick={(e) => setPosition(i)}
-                style={{
-                    width: 32,
-                    height: 12,
-                    backgroundColor: position === i ?  '#f2cb7e' : '#c0c2cecc',
-                    margin: 8
-                }}
             />
         );
-    })
+    });
 
     return (
         <div style={style}>

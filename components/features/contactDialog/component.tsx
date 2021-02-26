@@ -1,4 +1,4 @@
-import { FunctionComponent, SetStateAction, useState, Dispatch } from 'react';
+import { FunctionComponent, useState } from 'react';
 import { createStyles, Theme, WithStyles, withStyles } from '@material-ui/core/styles';
 import {
     Dialog,
