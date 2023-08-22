@@ -56,7 +56,7 @@ const Page: FunctionComponent<Props> = (props: Props) => {
               href='https://tumult.cc/bb-calc.html?1-8&3-3&2-6&3-4&5-4&6-4&7-4&4-3&7-1&2-5'
               mediaUrl='/bg_orc.jpg'
               enableOverlay={true}
-            />
+            />            
             <Bulletin
               xl={2}
               lg={3}
@@ -66,6 +66,17 @@ const Page: FunctionComponent<Props> = (props: Props) => {
               description='One of the first projects I created at Austin Coding Academy, this site features a JQuery and bootstrap frontend, responsive design, and parallax scrolling.'
               href='http://triciamihallcsw.com/'
               mediaUrl='/bluesky.jpg'
+              enableOverlay={true}
+            />
+            <Bulletin
+              xl={2}
+              lg={3}
+              md={5}
+              sm={10}
+              title='Acherons Gambit'
+              description='A small game made in one weekend by a team of 4 for Ludum Dare #48, featuring simple procedural dungeon generation'
+              href='https://beachboogeyman.itch.io/acherons-gambit'
+              mediaUrl='/acheron.png'
               enableOverlay={true}
             />
             <Bulletin
